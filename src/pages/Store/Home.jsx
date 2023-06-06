@@ -14,8 +14,19 @@ import Iitem2 from "assets/Iitem2.png";
 import Iitem3 from "assets/Iitem3.png";
 import Iitem4 from "assets/Iitem4.png";
 import Iitem5 from "assets/Iitem5.png";
-
 import IShop from "assets/IShop.png";
+import ICard1 from "assets/ICard1.png";
+import ICard2 from "assets/ICard2.png";
+import ICard3 from "assets/ICard3.png";
+import ICard4 from "assets/ICard4.png";
+import ICard5 from "assets/ICard5.png";
+import ICard6 from "assets/ICard6.png";
+import ICard7 from "assets/ICard7.png";
+import ICard8 from "assets/ICard8.png";
+import BrandBanner from "assets/Brand-banner.png";
+import CardProct from "components/Card/CardProct";
+import CardBanner from "components/Card/CardBanner";
+import BarList from "components/Layout/BarList";
 const StyleTop = styled.div`
   width: 100%;
   height: 737px;
@@ -23,7 +34,7 @@ const StyleTop = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  .CardRight {
+  .CardLeft {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,16 +44,49 @@ const StyleTop = styled.div`
   }
 `;
 
-const Div = styled.div`
+const Body = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-family: "Roboto";
+  font-style: normal;
   .Section {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 12px;
+    margin-top: 90px;
+  }
+  .StyleRotated {
     display: flex;
-    width: 648px;
-    height: 648px;
-    justify-content: center;
+    flex-direction: row;
+  }
+  .rotated {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    left: 150px;
+    top: 0;
+    left: 0;
+  }
+  .TextSub {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 140px;
+  }
+  .TextSub2 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 340px;
   }
 `;
 
@@ -87,8 +131,6 @@ const Card = styled.div`
     line-height: 55px;
   }
   .Text2 {
-    font-family: "Roboto";
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 55px;
@@ -121,16 +163,28 @@ const Brand = styled.div`
 
 const ItemLeft = styled.div`
   display: grid;
-  align-items: center;
-  .Img {
-    width: 312px;
-    height: 312px;
-    padding: 12px;
-  }
+  grid-template-columns: auto auto;
+  column-gap: 12px;
+`;
+
+const CardProducts = styled.div`
+  height: 850px;
+  width: 1120px;
+  margin-top: 40px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 100px;
+`;
+
+const StyleBannerMid = styled.div`
+  background-image: url(${BrandBanner});
+  width: 100%;
+  background-repeat: no-repeat;
 `;
 const Home = () => {
   return (
-    <Div>
+    <Body>0
       <StyleTop>
         <StyleHeader>
           <img className="Search" src={Search}></img>
@@ -142,7 +196,7 @@ const Home = () => {
             <p>Shopping</p>
           </StyI>
         </StyleHeader>
-        <div className="CardRight">
+        <div className="CardLeft">
           <Card>
             <p className="Text1">Collections</p>
             <p className="Text2">
@@ -165,7 +219,10 @@ const Home = () => {
         <img src={Img5} />
       </Brand>
       <section className="Section">
-        <img src={Iitem1} />
+        <div className="StyleRotated">
+          <div class="rotated">Explore new and popular styles</div>
+          <img src={Iitem1} />
+        </div>
         <ItemLeft>
           <img className="Img" src={Iitem2} />
           <img className="Img" src={Iitem3} />
@@ -173,7 +230,103 @@ const Home = () => {
           <img className="Img" src={Iitem5} />
         </ItemLeft>
       </section>
-    </Div>
+      <h1 className="TextSub">Or Subscribe To The Newsletter</h1>
+      <BarList></BarList>
+      <CardProducts>
+        <CardProct
+          img={ICard1}
+          rice={"63.85"}
+          status={0}
+          title={"Adicolor Classics Joggers"}
+          description={"Dress"}
+        />
+        <CardProct
+          img={ICard2}
+          rice={"130.0"}
+          status={0}
+          title={"Nike Sportswear Futura Luxe"}
+          description={"Bag"}
+        />
+        <CardProct
+          img={ICard3}
+          rice={"53.0"}
+          status={0}
+          title={"Geometric print Scarf"}
+          description={"scarf"}
+        />
+        <CardProct
+          img={ICard4}
+          rice={"155.0"}
+          status={1}
+          title={"Yellow Reserved Hoodie"}
+          description={"Dress"}
+        />
+        <CardProct
+          img={ICard5}
+          rice={"236.0"}
+          status={0}
+          title={"Basic Dress Green"}
+          description={"Dress"}
+        />
+        <CardProct
+          img={ICard6}
+          rice={"198.0"}
+          status={1}
+          title={"Nike Air Zoom Pegasus"}
+          description={"shoe"}
+        />
+        <CardProct
+          img={ICard7}
+          rice={"120.5"}
+          status={0}
+          title={"Nike Repel Miler"}
+          description={"Dress"}
+        />
+        <CardProct
+          img={ICard8}
+          rice={"160.0"}
+          status={0}
+          title={"Nike Sportswear Futura Luxe"}
+          description={"Glasses"}
+        />
+      </CardProducts>
+      <StyleBannerMid>
+        <img src={BrandBanner} style={{ width: "100%" }} />
+        <CardBanner></CardBanner>
+      </StyleBannerMid>
+      <h1 className="TextSub2">Bes't sellers</h1>
+      <BarList></BarList>
+      <CardProducts>
+        <CardProct
+          img={ICard5}
+          rice={"236.0"}
+          status={0}
+          title={"Basic Dress Green"}
+          description={"Dress"}
+        />
+        <CardProct
+          img={ICard2}
+          rice={"130.0"}
+          status={0}
+          title={"Nike Sportswear Futura Luxe"}
+          description={"Bag"}
+        />
+        <CardProct
+          img={ICard4}
+          rice={"155.0"}
+          status={1}
+          title={"Yellow Reserved Hoodie"}
+          description={"Dress"}
+        />
+        <CardProct
+          img={ICard6}
+          rice={"198.0"}
+          status={1}
+          title={"Nike Air Zoom Pegasus"}
+          description={"shoe"}
+        />
+      </CardProducts>
+    </Body>
   );
 };
 
