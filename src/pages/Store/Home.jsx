@@ -164,7 +164,6 @@ const Brand = styled.div`
 const ItemLeft = styled.div`
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 12px;
 `;
 
 const CardProducts = styled.div`
@@ -172,6 +171,14 @@ const CardProducts = styled.div`
   width: 1120px;
   margin-top: 40px;
   display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 100px;
+`;
+const CardSele = styled.div`
+  width: 1120px;
+  margin-top: 40px;
+  display: flex;
   justify-content: space-between;
   grid-template-columns: auto auto auto auto;
   margin-bottom: 100px;
@@ -184,7 +191,8 @@ const StyleBannerMid = styled.div`
 `;
 const Home = () => {
   return (
-    <Body>0
+    <Body>
+      0
       <StyleTop>
         <StyleHeader>
           <img className="Search" src={Search}></img>
@@ -296,7 +304,7 @@ const Home = () => {
       </StyleBannerMid>
       <h1 className="TextSub2">Bes't sellers</h1>
       <BarList></BarList>
-      <CardProducts>
+      <CardSele>
         <CardProct
           img={ICard5}
           rice={"236.0"}
@@ -325,7 +333,7 @@ const Home = () => {
           title={"Nike Air Zoom Pegasus"}
           description={"shoe"}
         />
-      </CardProducts>
+      </CardSele>
     </Body>
   );
 };
