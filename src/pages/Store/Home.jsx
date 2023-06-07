@@ -168,10 +168,6 @@ const ItemLeft = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
-  .Img {
-    width: 334px;
-    height: 334px;
-  }
 `;
 
 const CardProducts = styled.div`
@@ -196,6 +192,20 @@ const StyleBannerMid = styled.div`
   background-image: url(${BrandBanner});
   width: 100%;
   background-repeat: no-repeat;
+`;
+const StyleHover = styled.div`
+  position: relative;
+  .Hover-content {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    bottom: 0;
+  }
+  :hover {
+    .Hover-content {
+      background-color: #000000;
+    }
+  }
 `;
 const Home = () => {
   return (
@@ -236,13 +246,28 @@ const Home = () => {
       <section className="Section">
         <div className="StyleRotated">
           <div className="rotated">Explore new and popular styles</div>
-          <img src={Iitem1} />
+          <StyleHover>
+            <img src={Iitem1} />
+            <div className="Hover-content"></div>
+          </StyleHover>
         </div>
         <ItemLeft>
-          <img className="Img" src={Iitem2} />
-          <img className="Img" src={Iitem3} />
-          <img className="Img" src={Iitem4} />
-          <img className="Img" src={Iitem5} />
+          <StyleHover>
+            <img className="Img" src={Iitem2} />
+            <div className="Hover-content"></div>
+          </StyleHover>
+          <StyleHover>
+            <img className="Img" src={Iitem3} />
+            <div className="Hover-content"></div>
+          </StyleHover>
+          <StyleHover>
+            <img className="Img" src={Iitem4} />
+            <div className="Hover-content"></div>
+          </StyleHover>
+          <StyleHover>
+            <img className="Img" src={Iitem5} />
+            <div className="Hover-content"></div>
+          </StyleHover>
         </ItemLeft>
       </section>
       <h1 className="TextSub">Or Subscribe To The Newsletter</h1>

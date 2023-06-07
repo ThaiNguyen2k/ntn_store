@@ -29,6 +29,10 @@ const BtnBanner = styled.button`
   font-size: 29px;
   line-height: 34px;
   text-transform: capitalize;
+  :hover {
+    background: #ff6f61;
+    border: #ff6f61;
+  }
 `;
 
 const CardBanner = () => {

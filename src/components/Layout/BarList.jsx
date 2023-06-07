@@ -43,6 +43,10 @@ const ListMenu = styled.div`
     font-size: 16px;
     line-height: 22px;
     text-transform: capitalize;
+    :hover {
+      background: #ff6f61;
+      border: #ff6f61;
+    }
   }
   .IFilter {
     margin-right: 4px;
