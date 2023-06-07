@@ -27,6 +27,9 @@ import BrandBanner from "assets/Brand-banner.png";
 import CardProct from "components/Card/CardProct";
 import CardBanner from "components/Card/CardBanner";
 import BarList from "components/Layout/BarList";
+import CardFollow from "components/Card/CardFollow";
+import CardFooter from "components/Card/CardFooter";
+import Tag from "components/Tag/Tag";
 const StyleTop = styled.div`
   width: 100%;
   height: 737px;
@@ -120,7 +123,7 @@ const Card = styled.div`
   height: 364px;
   align-items: left;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: left;
   flex-direction: column;
   .Text1 {
@@ -164,6 +167,11 @@ const Brand = styled.div`
 const ItemLeft = styled.div`
   display: grid;
   grid-template-columns: auto auto;
+  gap: 10px;
+  .Img {
+    width: 334px;
+    height: 334px;
+  }
 `;
 
 const CardProducts = styled.div`
@@ -192,7 +200,6 @@ const StyleBannerMid = styled.div`
 const Home = () => {
   return (
     <Body>
-      0
       <StyleTop>
         <StyleHeader>
           <img className="Search" src={Search}></img>
@@ -228,7 +235,7 @@ const Home = () => {
       </Brand>
       <section className="Section">
         <div className="StyleRotated">
-          <div class="rotated">Explore new and popular styles</div>
+          <div className="rotated">Explore new and popular styles</div>
           <img src={Iitem1} />
         </div>
         <ItemLeft>
@@ -334,6 +341,11 @@ const Home = () => {
           description={"shoe"}
         />
       </CardSele>
+      <CardFollow></CardFollow>
+      <footer style={{ width: "100%" }}>
+        <Tag />
+        <CardFooter />
+      </footer>
     </Body>
   );
 };
