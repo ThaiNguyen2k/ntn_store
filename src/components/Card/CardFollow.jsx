@@ -18,7 +18,7 @@ const StyleFollowText = styled.div`
 `;
 const StyleBody = styled.div`
   background-color: #f0f0f0;
-  width: 100%;
+  width: 1920px;
   height: 653px;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ const ImgStyled = styled.div`
       height: 180px;
       display: flex;
       justify-content: space-around;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       background-size: cover;
       inset: 0;
       margin: auto;

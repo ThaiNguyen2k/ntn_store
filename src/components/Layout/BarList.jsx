@@ -55,6 +55,11 @@ const ListMenu = styled.div`
 const BarListM = styled.ol`
   display: flex;
   flex-direction: row;
+  li {
+    :hover {
+      color: #ff6f61;
+    }
+  }
   .ListMenu {
     margin-left: 40px;
   }

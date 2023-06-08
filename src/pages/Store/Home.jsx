@@ -194,7 +194,7 @@ const CardSele = styled.div`
 
 const StyleBannerMid = styled.div`
   position: relative;
-  width: 100%;
+  width: 1920px;
   height: 100%;
   background-repeat: no-repeat;
   justify-content: right;
@@ -425,7 +425,7 @@ const Home = () => {
         />
       </CardSele>
       <CardFollow></CardFollow>
-      <footer style={{ width: "100%" }}>
+      <footer style={{ width: "1920px" }}>
         <Tag />
         <CardFooter />
       </footer>
