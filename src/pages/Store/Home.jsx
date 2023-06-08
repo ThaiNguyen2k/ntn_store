@@ -154,6 +154,10 @@ const Card = styled.div`
     font-weight: 400;
     font-size: 29px;
     line-height: 34px;
+    :hover {
+      background-color: #ff6f61;
+      border: #ff6f61;
+    }
   }
 `;
 const Brand = styled.div`
@@ -198,15 +202,50 @@ const StyleHover = styled.div`
   .Hover-content {
     position: absolute;
     width: 100%;
-    height: 55px;
     bottom: 0;
+    display: none;
   }
   :hover {
     .Hover-content {
-      background-color: #000000;
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 55px;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 `;
+
+const Data = [
+  {
+    id: 1,
+    title: "Manto",
+    qty: 86,
+  },
+  {
+    id: 2,
+    title: "Pants",
+    qty: 200,
+  },
+  {
+    id: 3,
+    title: "Coat",
+    qty: 520,
+  },
+  {
+    id: 4,
+    title: "Shirt",
+    qty: 320,
+  },
+  {
+    id: 5,
+    title: "Jacket",
+    qty: 103,
+  },
+];
+
 const Home = () => {
   return (
     <Body>
@@ -248,25 +287,40 @@ const Home = () => {
           <div className="rotated">Explore new and popular styles</div>
           <StyleHover>
             <img src={Iitem1} />
-            <div className="Hover-content"></div>
+            <div className="Hover-content">
+              <p>{Data[0].title}</p>
+              <p>{Data[0].qty} Product</p>
+            </div>
           </StyleHover>
         </div>
         <ItemLeft>
           <StyleHover>
             <img className="Img" src={Iitem2} />
-            <div className="Hover-content"></div>
+            <div className="Hover-content">
+              <p>{Data[1].title}</p>
+              <p>{Data[1].qty} Product</p>
+            </div>
           </StyleHover>
           <StyleHover>
             <img className="Img" src={Iitem3} />
-            <div className="Hover-content"></div>
+            <div className="Hover-content">
+              <p>{Data[2].title}</p>
+              <p>{Data[2].qty} Product</p>
+            </div>
           </StyleHover>
           <StyleHover>
             <img className="Img" src={Iitem4} />
-            <div className="Hover-content"></div>
+            <div className="Hover-content">
+              <p>{Data[3].title}</p>
+              <p>{Data[3].qty} Product</p>
+            </div>
           </StyleHover>
           <StyleHover>
             <img className="Img" src={Iitem5} />
-            <div className="Hover-content"></div>
+            <div className="Hover-content">
+              <p>{Data[4].title}</p>
+              <p>{Data[4].qty} Product</p>
+            </div>
           </StyleHover>
         </ItemLeft>
       </section>
