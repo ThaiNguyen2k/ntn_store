@@ -45,6 +45,11 @@ const FooterMenu = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  li {
+    :hover {
+      color: #ff6f61;
+    }
+  }
 `;
 
 const Tag = () => {

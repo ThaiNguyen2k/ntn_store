@@ -89,7 +89,7 @@ const Body = styled.div`
     line-height: 59px;
     text-align: center;
     text-transform: capitalize;
-    margin-top: 340px;
+    margin-top: 140px;
   }
 `;
 
@@ -193,9 +193,13 @@ const CardSele = styled.div`
 `;
 
 const StyleBannerMid = styled.div`
-  background-image: url(${BrandBanner});
+  position: relative;
   width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
+  justify-content: right;
+  display: flex;
+  align-items: center;
 `;
 const StyleHover = styled.div`
   position: relative;

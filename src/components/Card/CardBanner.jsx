@@ -14,8 +14,8 @@ const TittleBanner = styled.div`
 const StyleBanner = styled.div`
   width: 500px;
   height: 300px;
-  margin-top: -600px;
-  margin-left: 1320px;
+  position: absolute;
+  margin-right: 200px;
 `;
 const BtnBanner = styled.button`
   width: 237px;
