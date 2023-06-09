@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import IFilter from "assets/IFilter.png";
 
-const BarList = () => {
+const BarList = ({ view }) => {
   return (
     <ListMenu>
       <BarListM>
@@ -10,10 +10,14 @@ const BarList = () => {
         <li className="ListMenu">Hoodies</li>
         <li className="ListMenu">Jacket</li>
       </BarListM>
-      <button className="BtnFilter">
-        <img className="IFilter" src={IFilter} />
-        Filter
-      </button>
+      {view == 1 ? (
+        <button className="BtnFilter">
+          <img className="IFilter" src={IFilter} />
+          Filter
+        </button>
+      ) : (
+        <button className="BtnFilter">Show All</button>
+      )}
     </ListMenu>
   );
 };

@@ -30,6 +30,7 @@ import BarList from "components/Layout/BarList";
 import CardFollow from "components/Card/CardFollow";
 import CardFooter from "components/Card/CardFooter";
 import Tag from "components/Tag/Tag";
+
 const StyleTop = styled.div`
   width: 100%;
   height: 737px;
@@ -55,6 +56,8 @@ const Body = styled.div`
   font-style: normal;
   .Section {
     display: grid;
+    width: 1120px;
+    height: 648px;
     grid-template-columns: auto auto;
     column-gap: 12px;
     margin-top: 90px;
@@ -218,6 +221,7 @@ const StyleHover = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 6.5px;
     }
   }
 `;
@@ -329,7 +333,7 @@ const Home = () => {
         </ItemLeft>
       </section>
       <h1 className="TextSub">Or Subscribe To The Newsletter</h1>
-      <BarList></BarList>
+      <BarList view={1}></BarList>
       <CardProducts>
         <CardProct
           img={ICard1}
@@ -337,6 +341,7 @@ const Home = () => {
           status={0}
           title={"Adicolor Classics Joggers"}
           description={"Dress"}
+          tag={0}
         />
         <CardProct
           img={ICard2}
@@ -344,6 +349,7 @@ const Home = () => {
           status={0}
           title={"Nike Sportswear Futura Luxe"}
           description={"Bag"}
+          tag={0}
         />
         <CardProct
           img={ICard3}
@@ -351,6 +357,7 @@ const Home = () => {
           status={0}
           title={"Geometric print Scarf"}
           description={"scarf"}
+          tag={0}
         />
         <CardProct
           img={ICard4}
@@ -358,6 +365,7 @@ const Home = () => {
           status={1}
           title={"Yellow Reserved Hoodie"}
           description={"Dress"}
+          tag={2}
         />
         <CardProct
           img={ICard5}
@@ -365,6 +373,7 @@ const Home = () => {
           status={0}
           title={"Basic Dress Green"}
           description={"Dress"}
+          tag={1}
         />
         <CardProct
           img={ICard6}
@@ -372,6 +381,7 @@ const Home = () => {
           status={1}
           title={"Nike Air Zoom Pegasus"}
           description={"shoe"}
+          tag={2}
         />
         <CardProct
           img={ICard7}
@@ -379,6 +389,7 @@ const Home = () => {
           status={0}
           title={"Nike Repel Miler"}
           description={"Dress"}
+          tag={0}
         />
         <CardProct
           img={ICard8}
@@ -393,7 +404,7 @@ const Home = () => {
         <CardBanner></CardBanner>
       </StyleBannerMid>
       <h1 className="TextSub2">Bes't sellers</h1>
-      <BarList></BarList>
+      <BarList view={0}></BarList>
       <CardSele>
         <CardProct
           img={ICard5}
@@ -401,6 +412,7 @@ const Home = () => {
           status={0}
           title={"Basic Dress Green"}
           description={"Dress"}
+          tag={1}
         />
         <CardProct
           img={ICard2}
@@ -408,6 +420,7 @@ const Home = () => {
           status={0}
           title={"Nike Sportswear Futura Luxe"}
           description={"Bag"}
+          tag={0}
         />
         <CardProct
           img={ICard4}
@@ -415,6 +428,7 @@ const Home = () => {
           status={1}
           title={"Yellow Reserved Hoodie"}
           description={"Dress"}
+          tag={2}
         />
         <CardProct
           img={ICard6}
@@ -422,6 +436,7 @@ const Home = () => {
           status={1}
           title={"Nike Air Zoom Pegasus"}
           description={"shoe"}
+          tag={2}
         />
       </CardSele>
       <CardFollow></CardFollow>
@@ -434,3 +449,23 @@ const Home = () => {
 };
 
 export default Home;
+
+// const dataProduct = [
+//   {
+//     id: 1,
+//     img: ICard1,
+//     rice: "63.85",
+//     status: 0,
+//     title: "Adicolor Classics Joggers",
+//     description: "Dress",
+//     tag: 0,
+//   },
+//   {
+//     id: 2,
+//     img: ICard2,
+//     rice: "130.0",
+//     status: "Nike Sportswear Futura Luxe",
+//     description: "Bag",
+//     tag: 0,
+//   },
+// ];

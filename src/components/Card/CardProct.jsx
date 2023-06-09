@@ -17,6 +17,21 @@ const ImgStyled = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  .Tag {
+    top: 0;
+    position: absolute;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 52px;
+    height: 24px;
+    text-align: center;
+    margin-top: 22px;
+  }
   img {
     width: 100%;
   }
@@ -57,11 +72,12 @@ const ImgStyled = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
+      margin-bottom: 5px;
     }
   }
 `;
 
-const CardProct = ({ title, description, img, rice, status }) => (
+const CardProct = ({ title, description, img, rice, status, tag }) => (
   <Card
     hoverable
     style={{
@@ -71,6 +87,15 @@ const CardProct = ({ title, description, img, rice, status }) => (
     cover={
       <ImgStyled>
         <img alt="example" src={img} />
+        <div className="Tag">
+          {tag == 1 ? (
+            <div style={{ backgroundColor: "Red" }}>Hot</div>
+          ) : tag == 2 ? (
+            <div style={{ backgroundColor: "black" }}>Sale</div>
+          ) : (
+            <div style={{ display: "none" }}></div>
+          )}
+        </div>
         <div className="hover-content">
           <div>
             <img className="ImgI" src={Heart} />
